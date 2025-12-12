@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: yuvax-backend
+    env: node
+    region: oregon   # you can change to frankfurt, singapore, etc. depending on your audience
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    plan: free
+
+    envVars:
+      - key: NODE_ENV
+        value: production
